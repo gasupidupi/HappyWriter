@@ -6,3 +6,7 @@ artikellist : WORepetition {
 bezeichnung : WOString {
 	value = artikelloopvar.bezeichnung;
 }
+
+detaillink : WOHyperlink {
+	action = showdetail;
+}

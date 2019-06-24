@@ -25,4 +25,9 @@ public class Main extends BaseComponent {
 	public void setArtikelloopvar(Artikel artikelloopvar) {
 		this.artikelloopvar = artikelloopvar;
 	}
+	
+	public ArtikelSeite showdetail() {
+		ArtikelSeite nextpage = pageWithName(ArtikelSeite.class);
+		return nextpage;
+	}
 }
