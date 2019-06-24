@@ -1,8 +1,10 @@
 package your.app.components;
 
 import com.webobjects.appserver.WOContext;
+import com.webobjects.foundation.NSMutableArray;
 
 import your.app.Application;
+import your.app.Artikel;
 
 public class Main extends BaseComponent {
 	public Main(WOContext context) {

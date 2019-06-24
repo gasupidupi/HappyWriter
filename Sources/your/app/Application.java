@@ -1,5 +1,7 @@
 package your.app;
 
+import com.webobjects.foundation.NSMutableArray;
+
 import er.extensions.appserver.ERXApplication;
 
 public class Application extends ERXApplication {
