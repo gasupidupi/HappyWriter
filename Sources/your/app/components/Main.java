@@ -28,6 +28,7 @@ public class Main extends BaseComponent {
 	
 	public ArtikelSeite showdetail() {
 		ArtikelSeite nextpage = pageWithName(ArtikelSeite.class);
+		nextpage.setartikelloopvar(artikelloopvar);
 		return nextpage;
 	}
 }
