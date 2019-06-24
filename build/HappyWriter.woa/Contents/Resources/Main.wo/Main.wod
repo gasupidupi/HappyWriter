@@ -1,0 +1,8 @@
+artikeluserlist : WORepetition {
+	list = application.artikel;
+	item = artikelloopvar;
+}
+
+bezeichnung : WOString {
+	value = artikelloopvar.bezeichnung;
+}

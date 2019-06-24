@@ -1,0 +1,39 @@
+{
+    ERDiagrams = (
+        {
+            diagramName = NewERDiagram; 
+            height = 100; 
+            width = 200; 
+            xPos = 472; 
+            yPos = "-73"; 
+        }
+    ); 
+    attributes = (
+        {allowsNull = N; name = id; prototypeName = id; }, 
+        {columnName = name; name = name; prototypeName = shortString; }, 
+        {columnName = preis; name = preis; prototypeName = longNumber; }
+    ); 
+    attributesUsedForLocking = (id, name, preis); 
+    className = Inhalt; 
+    classProperties = (bestellteKonfigurations, konfigurations, name, preis); 
+    externalName = Inhalt; 
+    fetchSpecificationDictionary = {}; 
+    name = Inhalt; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = BestellteKonfiguration; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = "inhalt_id"; sourceAttribute = id; }); 
+            name = bestellteKonfigurations; 
+        }, 
+        {
+            destination = Konfiguration; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = "inhalt_id"; sourceAttribute = id; }); 
+            name = konfigurations; 
+        }
+    ); 
+}

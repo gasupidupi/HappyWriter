@@ -1,0 +1,48 @@
+{
+    ERDiagrams = (
+        {
+            diagramName = NewERDiagram; 
+            height = 100; 
+            width = 200; 
+            xPos = "-320"; 
+            yPos = 190; 
+        }
+    ); 
+    attributes = (
+        {columnName = bemerkungen; name = bemerkungen; prototypeName = varchar100; }, 
+        {columnName = datum; name = datum; prototypeName = date; }, 
+        {allowsNull = N; name = id; prototypeName = id; }, 
+        {
+            allowsNull = N; 
+            columnName = "kunde_id"; 
+            name = "kunde_id"; 
+            prototypeName = id; 
+        }
+    ); 
+    attributesUsedForLocking = (bemerkungen, datum, id, "kunde_id"); 
+    className = Bestellung; 
+    classProperties = (bemerkungen, bestellPositions, datum, kunde); 
+    externalName = Bestellung; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_javaClientClassName" = Bestellung; }; 
+    name = Bestellung; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = BestellPosition; 
+            isMandatory = Y; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = "bestell_id"; sourceAttribute = id; }); 
+            name = bestellPositions; 
+        }, 
+        {
+            destination = Kunde; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = "kunde_id"; }); 
+            name = kunde; 
+        }
+    ); 
+}

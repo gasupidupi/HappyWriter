@@ -1,0 +1,58 @@
+{
+    ERDiagrams = (
+        {
+            diagramName = NewERDiagram; 
+            height = 100; 
+            width = 200; 
+            xPos = "-116"; 
+            yPos = 381; 
+        }
+    ); 
+    attributes = (
+        {
+            allowsNull = N; 
+            columnName = "artikel_id"; 
+            name = "artikel_id"; 
+            prototypeName = id; 
+        }, 
+        {
+            allowsNull = N; 
+            columnName = "bestell_id"; 
+            name = "bestell_id"; 
+            prototypeName = id; 
+        }, 
+        {allowsNull = N; name = id; prototypeName = id; }
+    ); 
+    attributesUsedForLocking = ("artikel_id", "bestell_id", id); 
+    className = BestellPosition; 
+    classProperties = (artikel, bestellteKonfigurations, bestellung); 
+    externalName = BestellPosition; 
+    fetchSpecificationDictionary = {}; 
+    name = BestellPosition; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = Artikel; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = "artikel_id"; }); 
+            name = artikel; 
+        }, 
+        {
+            destination = BestellteKonfiguration; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = "bestellPos_id"; sourceAttribute = id; }); 
+            name = bestellteKonfigurations; 
+        }, 
+        {
+            destination = Bestellung; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = "bestell_id"; }); 
+            name = bestellung; 
+        }
+    ); 
+}
