@@ -6,6 +6,7 @@ import com.webobjects.foundation.NSMutableArray;
 import your.app.Application;
 import your.app.Artikel;
 
+
 public class Main extends BaseComponent {
 	public Main(WOContext context) {
 		super(context);
@@ -14,4 +15,14 @@ public class Main extends BaseComponent {
 	Application application = (Application)Application.application();
 	
 	NSMutableArray<Artikel> artikel = application.getArtikel();
+	
+	private Artikel artikelloopvar;
+	
+	public Artikel artikelloopvar() {
+		return artikelloopvar;
+	}
+	
+	public void setArtikelloopvar(Artikel artikelloopvar) {
+		this.artikelloopvar = artikelloopvar;
+	}
 }
