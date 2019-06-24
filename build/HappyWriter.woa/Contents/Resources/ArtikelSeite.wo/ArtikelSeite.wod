@@ -1,3 +1,29 @@
 artikelname : WOString {
 	value = artikelloopvar.bezeichnung;
 }
+
+schere : WOCheckBox {
+	checked = checkedschere;
+}
+
+bleistift : WOCheckBox {
+	checked = checkedbleistift;
+}
+feder : WOCheckBox {
+	checked = checkedfeder;
+}
+lineal : WOCheckBox {
+	checked = checkedlineal;
+}
+marker : WOCheckBox {
+	checked = checkedmarker;
+}
+radiergummi : WOCheckBox {
+	checked = checkedradiergummi;
+}
+spitzer : WOCheckBox {
+	checked = checkedspitzer;
+}
+zirkel : WOCheckBox {
+	checked = checkedzirkel;
+}

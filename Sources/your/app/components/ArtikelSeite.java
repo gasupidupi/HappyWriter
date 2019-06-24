@@ -25,4 +25,86 @@ public class ArtikelSeite extends WOComponent {
     public void setartikelloopvar(Artikel artikelloopvar) {
     	this.artikelloopvar = artikelloopvar;
     }
+    
+    private boolean checkedschere;
+    
+    public boolean checkedschere() {
+    	return checkedschere;
+    }
+    
+    public void setCheckedschere(boolean checkedschere) {
+    	this.checkedschere = checkedschere;
+    }
+    
+    private boolean checkedbleistift;
+    
+    public boolean checkedbleistift() {
+    	return checkedschere;
+    }
+    
+    public void setCheckedbleistift(boolean checkedbleistift) {
+    	this.checkedbleistift = checkedbleistift;
+    }
+    
+    private boolean checkedfeder;
+    
+    public boolean checkedfeder() {
+    	return checkedschere;
+    }
+    
+    public void setCheckedfeder(boolean checkedfeder) {
+    	this.checkedfeder = checkedfeder;
+    }
+    
+    private boolean checkedlineal;
+    
+    public boolean checkedlineal() {
+    	return checkedschere;
+    }
+    
+    public void setCheckedlineal(boolean checkedlineal) {
+    	this.checkedlineal = checkedlineal;
+    }
+    
+    private boolean checkedmarker;
+    
+    public boolean checkedmarker() {
+    	return checkedschere;
+    }
+    
+    public void setCheckedmarker(boolean checkedmarker) {
+    	this.checkedmarker = checkedmarker;
+    }
+    
+    private boolean checkedradiergummi;
+    
+    public boolean checkedradiergummi() {
+    	return checkedradiergummi;
+    }
+    
+    public void setCheckedradiergummi(boolean checkedradiergummi) {
+    	this.checkedradiergummi = checkedradiergummi;
+    }
+    
+    private boolean checkedspitzer;
+    
+    public boolean checkedspitzer() {
+    	return checkedspitzer;
+    }
+    
+    public void setCheckedspitzer(boolean checkedspitzer) {
+    	this.checkedspitzer = checkedspitzer;
+    }
+    
+    private boolean checkedzirkel;
+    
+    public boolean checkedzirkel() {
+    	return checkedradiergummi;
+    }
+    
+    public void setCheckedzirkel(boolean checkedzirkel) {
+    	this.checkedzirkel = checkedzirkel;
+    }
+    
+    
 }
