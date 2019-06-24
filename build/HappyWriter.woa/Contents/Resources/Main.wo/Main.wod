@@ -1,4 +1,4 @@
-artikeluserlist : WORepetition {
+artikellist : WORepetition {
 	list = application.artikel;
 	item = artikelloopvar;
 }
