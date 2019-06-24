@@ -27,3 +27,11 @@ spitzer : WOCheckBox {
 zirkel : WOCheckBox {
 	checked = checkedzirkel;
 }
+
+submitbutton : WOSubmitButton {
+	action = inhaltsubmitted;
+}
+
+inhaltform : WOForm {
+	multipleSubmit = true;
+}

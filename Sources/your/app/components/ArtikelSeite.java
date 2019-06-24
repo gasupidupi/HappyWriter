@@ -106,5 +106,8 @@ public class ArtikelSeite extends WOComponent {
     	this.checkedzirkel = checkedzirkel;
     }
     
+	public void inhaltsubmitted() {
+
+	}
     
 }
