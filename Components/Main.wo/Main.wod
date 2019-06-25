@@ -10,3 +10,7 @@ bezeichnung : WOString {
 detaillink : WOHyperlink {
 	action = showdetail;
 }
+
+checkoutbutton : WOSubmitButton {
+	action = checkout;
+}

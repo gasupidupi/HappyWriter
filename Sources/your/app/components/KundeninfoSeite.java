@@ -85,4 +85,12 @@ public class KundeninfoSeite extends WOComponent {
     public void setBemerkungen(Integer bemerkungen) {
     	this.bemerkungen = bemerkungen;
     }
+    
+    public void kundesubmitted() {
+    	
+    }
+    
+    public void backbuttonpressed() {
+    	
+    }
 }

@@ -2,6 +2,10 @@ kundenform : WOForm {
 	multipleSubmit = true;
 }
 
+backbutton : WOSubmitButton {
+	action = backbuttonpressed;
+}
+
 submitbutton : WOSubmitButton {
 	action = kundesubmitted;
 }
