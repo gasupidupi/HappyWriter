@@ -1,0 +1,36 @@
+kundenform : WOForm {
+	multipleSubmit = true;
+}
+
+submitbutton : WOSubmitButton {
+	action = kundesubmitted;
+}
+
+name : WOTextField {
+	value = name;
+}
+
+vorname : WOTextField {
+	value = vorname;
+}
+
+strasse : WOTextField {
+	value = strasse;
+}
+
+plz : WOTextField {
+	value = plz;
+}
+
+ort : WOTextField {
+	value = ort;
+}
+
+telefon : WOTextField {
+	value = telefon;
+}
+
+bemerkungen : WOTextField {
+	value = bemerkungen;
+}
+
