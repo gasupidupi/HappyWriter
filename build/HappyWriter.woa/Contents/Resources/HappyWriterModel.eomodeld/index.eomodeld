@@ -1,7 +1,14 @@
 {
     EOModelVersion = "2.1"; 
     adaptorName = JDBC; 
-    connectionDictionary = {}; 
+    connectionDictionary = {
+        URL = localhost; 
+        deploymentProfile = d; 
+        driver = ""; 
+        password = student; 
+        plugin = ""; 
+        username = student; 
+    }; 
     entities = (
         {className = Artikel; name = Artikel; }, 
         {className = BestellPosition; name = BestellPosition; }, 

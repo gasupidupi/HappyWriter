@@ -2,12 +2,14 @@ package your.app.components;
 
 import com.webobjects.appserver.WOContext;
 
+import er.extensions.components.ERXComponent;
 import your.app.Application;
 import your.app.Artikel;
 
 import com.webobjects.appserver.WOComponent;
 
-public class ArtikelSeite extends WOComponent {
+//extends ERXComponent: Hilfe von Markus Ruggiero angefordert
+public class ArtikelSeite extends ERXComponent  {
 	
 	private Artikel artikelloopvar;
 	
@@ -108,7 +110,8 @@ public class ArtikelSeite extends WOComponent {
     
 	public Main inhaltsubmitted() {
 		Main nextpage = pageWithName(Main.class);
-		nextpage.setBestellung(artikelloopvar);
+		//fix this later
+		//nextpage.setBestellung(artikelloopvar);
 		return nextpage;
 	}
     

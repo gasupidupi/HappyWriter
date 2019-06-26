@@ -11,6 +11,6 @@ detaillink : WOHyperlink {
 	action = showdetail;
 }
 
-checkoutbutton : WOSubmitButton {
+checkoutbutton : WOHyperlink {
 	action = checkout;
 }
