@@ -99,8 +99,9 @@ public class KundeninfoSeite extends ERXComponent {
 		return nextpage;
     }
     
-    public void backbuttonpressed() {
-    	
+    public Main backbuttonpressed() {
+    	Main nextpage = pageWithName(Main.class);
+		return nextpage;	
     }
 
 	public void setkunde(Kunde kunde) {

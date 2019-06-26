@@ -1,8 +1,7 @@
-
-backbutton : WOSubmitButton {
+backbutton : WOHyperlink {
 	action = backbuttonpressed;
 }
 
-submitbutton : WOSubmitButton {
+submitbutton : WOHyperlink {
 	action = bestaetigungsubmitted;
 }
