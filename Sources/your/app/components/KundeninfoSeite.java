@@ -4,6 +4,7 @@ import com.webobjects.appserver.WOContext;
 
 import er.extensions.components.ERXComponent;
 import your.app.Application;
+import your.app.Kunde;
 
 import com.webobjects.appserver.WOComponent;
 
@@ -78,6 +79,11 @@ public class KundeninfoSeite extends ERXComponent {
     }
 
     private Integer bemerkungen;
+
+
+
+
+	private Kunde kunde;
     
     public Integer bemerkungen() {
     	return bemerkungen;
@@ -87,11 +93,18 @@ public class KundeninfoSeite extends ERXComponent {
     	this.bemerkungen = bemerkungen;
     }
     
-    public void kundesubmitted() {
-    	
+    public BestaetigungsSeite kundesubmitted() {
+		BestaetigungsSeite nextpage = pageWithName(BestaetigungsSeite.class);
+		nextpage.setkunde(kunde);
+		return nextpage;
     }
     
     public void backbuttonpressed() {
     	
     }
+
+	public void setkunde(Kunde kunde) {
+		// TODO Auto-generated method stub
+		this.kunde = kunde;
+	}
 }

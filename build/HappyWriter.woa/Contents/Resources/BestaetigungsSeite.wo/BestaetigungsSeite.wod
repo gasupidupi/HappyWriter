@@ -1,0 +1,8 @@
+
+backbutton : WOSubmitButton {
+	action = backbuttonpressed;
+}
+
+submitbutton : WOSubmitButton {
+	action = bestaetigungsubmitted;
+}
