@@ -4,6 +4,7 @@ import com.ibm.icu.math.BigDecimal;
 import com.webobjects.foundation.NSMutableArray;
 
 import er.extensions.appserver.ERXApplication;
+import your.app.eo.Artikel;
 
 public class Application extends ERXApplication {
 	public static void main(String[] argv) {
