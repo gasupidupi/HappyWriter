@@ -1,6 +1,5 @@
 package your.app;
 
-import com.ibm.icu.math.BigDecimal;
 import com.webobjects.foundation.NSMutableArray;
 
 import er.extensions.appserver.ERXApplication;
@@ -19,8 +18,8 @@ public class Application extends ERXApplication {
 		
 		
 		artikel = new NSMutableArray<Artikel>();
-		artikel.add(new Artikel("Etui", new java.math.BigDecimal(6.95)));
-		artikel.add(new Artikel("Holzschachtel", new java.math.BigDecimal(8.50)));
+		artikel.add(new Artikel("Etui", 6.95));
+		artikel.add(new Artikel("Holzschachtel", 8.50));
 	}
 	
 	public NSMutableArray<Artikel> getArtikel() {
@@ -34,13 +33,13 @@ public class Application extends ERXApplication {
 		bestellung.add(calculatedBestellung);
 	}
 	
-	public Artikel calculatePrice(Artikel artikel) {
-		java.math.BigDecimal total = java.math.BigDecimal.valueOf(0);
-		for(int i = 0; artikel.inhalte().size() < i; i++) {
-			total = artikel.inhalte().get(i).preis().add(total);
+	public Artikel calculatePrice(Artikel artikel2) {
+		long total = (long) artikel2.preis();
+		for(int i = 0; artikel2.inhalte().count() > i; i++) {
+			total = artikel2.inhalte().get(i).preis() + total;
 		}
-		artikel.setPreis(total);
-		return artikel;
+		artikel2.setPreis(total);
+		return artikel2;
 	}
 	
 	public NSMutableArray<Artikel> bestellung() {

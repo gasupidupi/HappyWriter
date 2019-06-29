@@ -27,13 +27,13 @@ public class ArtikelSeite extends ERXComponent  {
 	}
 	
 	public void setPossibleinhalt() {
-		inhaltliste.add(new Inhalt("schere", "Schere", BigDecimal.valueOf(5)));
-		inhaltliste.add(new Inhalt("bleistift", "Bleistift", BigDecimal.valueOf(5)));
-		inhaltliste.add(new Inhalt("feder", "Feder", BigDecimal.valueOf(5)));
-		inhaltliste.add(new Inhalt("lineal", "Lineal", BigDecimal.valueOf(5)));
-		inhaltliste.add(new Inhalt("marker", "Marker", BigDecimal.valueOf(5)));
-		inhaltliste.add(new Inhalt("radiergummi", "Radiergummi", BigDecimal.valueOf(5)));
-		inhaltliste.add(new Inhalt("spitzer", "Spitzer", BigDecimal.valueOf(5)));
+		inhaltliste.add(new Inhalt("schere", "Schere", 5));
+		inhaltliste.add(new Inhalt("bleistift", "Bleistift", 5));
+		inhaltliste.add(new Inhalt("feder", "Feder", 5));
+		inhaltliste.add(new Inhalt("lineal", "Lineal", 5));
+		inhaltliste.add(new Inhalt("marker", "Marker", 5));
+		inhaltliste.add(new Inhalt("radiergummi", "Radiergummi", 5));
+		inhaltliste.add(new Inhalt("spitzer", "Spitzer", 5));
 	}
 	
 	private Inhalt inhaltloopvar;
@@ -69,7 +69,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedschere(boolean checkedschere) {
     	if(checkedschere) {
-    		checkedinhalt.add(new Inhalt("schere", "Schere", BigDecimal.valueOf(5)));
+    		checkedinhalt.add(new Inhalt("schere", "Schere", 5));
     	}
     	this.checkedschere = checkedschere;
     }
@@ -82,7 +82,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedbleistift(boolean checkedbleistift) {
     	if(checkedbleistift) {
-    		checkedinhalt.add(new Inhalt("bleistift", "Bleistift", BigDecimal.valueOf(5)));
+    		checkedinhalt.add(new Inhalt("bleistift", "Bleistift", 5));
     	}
     	this.checkedbleistift = checkedbleistift;
     }
@@ -95,7 +95,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedfeder(boolean checkedfeder) {
     	if(checkedfeder) {
-    		checkedinhalt.add(new Inhalt("feder", "Feder", BigDecimal.valueOf(5)));
+    		checkedinhalt.add(new Inhalt("feder", "Feder", 5));
     	}
     	this.checkedfeder = checkedfeder;
     }
@@ -108,7 +108,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedlineal(boolean checkedlineal) {
     	if(checkedlineal) {
-    		checkedinhalt.add(new Inhalt("lineal", "Lineal", BigDecimal.valueOf(5)));
+    		checkedinhalt.add(new Inhalt("lineal", "Lineal", 5));
     	}
     	this.checkedlineal = checkedlineal;
     }
@@ -121,7 +121,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedmarker(boolean checkedmarker) {
     	if(checkedmarker) {
-    		checkedinhalt.add(new Inhalt("marker", "Marker", BigDecimal.valueOf(5)));
+    		checkedinhalt.add(new Inhalt("marker", "Marker", 5));
     	}
     	this.checkedmarker = checkedmarker;
     }
@@ -134,7 +134,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedradiergummi(boolean checkedradiergummi) {
     	if(checkedradiergummi) {
-    		checkedinhalt.add(new Inhalt("radiergummi", "Radiergummi", BigDecimal.valueOf(5)));
+    		checkedinhalt.add(new Inhalt("radiergummi", "Radiergummi", 5));
     	}
     	this.checkedradiergummi = checkedradiergummi;
     }
@@ -147,7 +147,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedspitzer(boolean checkedspitzer) {
     	if(checkedspitzer) {
-    		checkedinhalt.add(new Inhalt("spitzer", "Spitzer", BigDecimal.valueOf(5)));
+    		checkedinhalt.add(new Inhalt("spitzer", "Spitzer", 5));
     	}
     	this.checkedspitzer = checkedspitzer;
     }

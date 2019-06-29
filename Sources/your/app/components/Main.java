@@ -44,7 +44,7 @@ public class Main extends BaseComponent {
 	}
 	
 	public String bestellungartikelpreis() {
-		return bestellungloopvar.preis().toString();
+		return String.valueOf(bestellungloopvar.preis());
 	}
 	
 	private Artikel artikelloopvar;

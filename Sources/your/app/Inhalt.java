@@ -1,18 +1,19 @@
 package your.app;
 
-import java.math.BigDecimal;
+
 
 import com.webobjects.foundation.NSMutableArray;
 
 public class Inhalt {
 	private String name;
-	private BigDecimal preis;
+	private long preis;
 	private String id;
 	
-	public Inhalt(String id, String name, BigDecimal preis) {
+	public Inhalt(String id, String name, long preis) {
 		// TODO Auto-generated constructor stub
 		this.id = id;
 		this.name = name;
+		this.preis = preis;
 	}
 
 	public String name() {
@@ -23,8 +24,8 @@ public class Inhalt {
 		return id;
 	}
 	
-	public BigDecimal preis() {
-		return preis();
+	public long preis() {
+		return preis;
 	}
 	
 	public String icon() {
