@@ -2,10 +2,12 @@ package your.app.components;
 
 import com.webobjects.appserver.WOContext;
 import com.webobjects.foundation.NSArray;
+import com.webobjects.foundation.NSMutableArray;
 
 import er.extensions.components.ERXComponent;
 import your.app.Application;
 import your.app.Artikel;
+import your.app.Bestellung;
 import your.app.Inhalt;
 
 import java.math.BigDecimal;
@@ -17,7 +19,9 @@ public class ArtikelSeite extends ERXComponent  {
 	
 	private Artikel artikelloopvar;
 	
-	private NSArray<Inhalt> inhaltliste;
+	private NSMutableArray<Inhalt> inhaltliste;
+	
+	private NSArray<Inhalt> checkedinhalt;
 	
 	public NSArray<Inhalt> inhaltliste() {
 		return inhaltliste;
@@ -65,6 +69,9 @@ public class ArtikelSeite extends ERXComponent  {
     }
     
     public void setCheckedschere(boolean checkedschere) {
+    	if(checkedschere) {
+    		checkedinhalt.add(inhaltloopvar);
+    	}
     	this.checkedschere = checkedschere;
     }
     
@@ -75,6 +82,9 @@ public class ArtikelSeite extends ERXComponent  {
     }
     
     public void setCheckedbleistift(boolean checkedbleistift) {
+    	if(checkedbleistift) {
+    		checkedinhalt.add(inhaltloopvar);
+    	}
     	this.checkedbleistift = checkedbleistift;
     }
     
@@ -85,6 +95,9 @@ public class ArtikelSeite extends ERXComponent  {
     }
     
     public void setCheckedfeder(boolean checkedfeder) {
+    	if(checkedfeder) {
+    		checkedinhalt.add(inhaltloopvar);
+    	}
     	this.checkedfeder = checkedfeder;
     }
     
@@ -95,6 +108,9 @@ public class ArtikelSeite extends ERXComponent  {
     }
     
     public void setCheckedlineal(boolean checkedlineal) {
+    	if(checkedlineal) {
+    		checkedinhalt.add(inhaltloopvar);
+    	}
     	this.checkedlineal = checkedlineal;
     }
     
@@ -105,6 +121,9 @@ public class ArtikelSeite extends ERXComponent  {
     }
     
     public void setCheckedmarker(boolean checkedmarker) {
+    	if(checkedmarker) {
+    		checkedinhalt.add(inhaltloopvar);
+    	}
     	this.checkedmarker = checkedmarker;
     }
     
@@ -115,6 +134,9 @@ public class ArtikelSeite extends ERXComponent  {
     }
     
     public void setCheckedradiergummi(boolean checkedradiergummi) {
+    	if(checkedradiergummi) {
+    		checkedinhalt.add(inhaltloopvar);
+    	}
     	this.checkedradiergummi = checkedradiergummi;
     }
     
@@ -125,6 +147,9 @@ public class ArtikelSeite extends ERXComponent  {
     }
     
     public void setCheckedspitzer(boolean checkedspitzer) {
+    	if(checkedspitzer) {
+    		checkedinhalt.add(inhaltloopvar);
+    	}
     	this.checkedspitzer = checkedspitzer;
     }
     
@@ -142,6 +167,11 @@ public class ArtikelSeite extends ERXComponent  {
 		Main nextpage = pageWithName(Main.class);
 		//fix this later
 		//nextpage.setBestellung(artikelloopvar);
+		for(int i = 0; i<inhaltliste.size(); i++) {
+			
+		}
+		Bestellung bestellung = new Bestellung(artikelloopvar, checkedinhalt);
+		nextpage.setBestellung(bestellung);
 		return nextpage;
 	}
     

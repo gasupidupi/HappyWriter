@@ -1,11 +1,19 @@
 package your.app;
 
+import com.webobjects.foundation.NSArray;
 import com.webobjects.foundation.NSMutableArray;
 
 public class Bestellung {
+	private Artikel artikel;
+	private NSArray<Inhalt> inhalt;
 	
 	
-	private NSMutableArray<Artikel> artikel;
+	public Bestellung(Artikel artikel, NSArray<Inhalt> inhalt) {
+		this.artikel = artikel;
+		this.inhalt = inhalt;
+	}
+
+
 	
 	
 }
