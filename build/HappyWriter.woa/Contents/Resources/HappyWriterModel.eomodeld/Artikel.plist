@@ -17,7 +17,6 @@
     className = Artikel; 
     classProperties = (bestellPositions, bezeichnung, konfigurations, preis); 
     externalName = Artikel; 
-    fetchSpecificationDictionary = {}; 
     name = Artikel; 
     primaryKeyAttributes = (id); 
     relationships = (
