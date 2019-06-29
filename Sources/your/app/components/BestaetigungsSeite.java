@@ -29,27 +29,27 @@ public class BestaetigungsSeite extends ERXComponent {
 	
 	
 	
-	private Artikel angabenloopvar;
+	private Kunde kundeloopvar;
 	
-	private NSArray<Inhalt> angabenliste;
+	private NSArray<String> angabenliste;
 	
-	public NSArray<Inhalt> inhaltliste() {
-		return inhaltliste;
+	public NSArray<String> angabenliste() {
+		return fillangabenliste();
 	}
 	
-	private Inhalt inhaltloopvar;
-	
-	public Inhalt inhaltloopvar() {
-		return inhaltloopvar;
+	public NSArray<String> fillangabenliste() {
+		angabenliste.add("");
+		return angabenliste;
 	}
 	
-	public void setInhaltloopvar(Inhalt inhaltloopvar) {
-		this.inhaltloopvar = inhaltloopvar;
+	public Kunde kundeloopvar() {
+		return kundeloopvar;
 	}
 	
-	public Artikel artikelloopvar() {
-		return artikelloopvar;
+	public void setKundeloopvar(Kunde kundeloopvar) {
+		this.kundeloopvar = kundeloopvar;
 	}
+	
 	
 	
 	

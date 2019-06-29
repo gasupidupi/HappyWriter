@@ -2,9 +2,9 @@
     EOModelVersion = "2.1"; 
     adaptorName = JDBC; 
     connectionDictionary = {
-        URL = localhost; 
-        deploymentProfile = student; 
-        driver = "com.microsoft.jdbc.sqlserver. SQLServerDriver"; 
+        URL = "jdbc:mysql://localhost/happywriter"; 
+        deploymentProfile = ""; 
+        driver = ""; 
         password = student; 
         plugin = ""; 
         username = student; 
@@ -26,9 +26,9 @@
                 Default = {
                     adaptorName = JDBC; 
                     connectionDictionary = {
-                        URL = localhost; 
-                        deploymentProfile = student; 
-                        driver = "com.microsoft.jdbc.sqlserver. SQLServerDriver"; 
+                        URL = "jdbc:mysql://localhost/happywriter"; 
+                        deploymentProfile = ""; 
+                        driver = ""; 
                         password = student; 
                         plugin = ""; 
                         username = student; 
