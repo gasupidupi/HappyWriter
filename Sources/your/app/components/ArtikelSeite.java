@@ -1,10 +1,14 @@
 package your.app.components;
 
 import com.webobjects.appserver.WOContext;
+import com.webobjects.foundation.NSArray;
 
 import er.extensions.components.ERXComponent;
 import your.app.Application;
 import your.app.Artikel;
+import your.app.Inhalt;
+
+import java.math.BigDecimal;
 
 import com.webobjects.appserver.WOComponent;
 
@@ -12,6 +16,32 @@ import com.webobjects.appserver.WOComponent;
 public class ArtikelSeite extends ERXComponent  {
 	
 	private Artikel artikelloopvar;
+	
+	private NSArray<Inhalt> inhaltliste;
+	
+	public NSArray<Inhalt> inhaltliste() {
+		return inhaltliste;
+	}
+	
+	public void setPossibleinhalt() {
+		inhaltliste.add(new Inhalt("schere", "Schere", BigDecimal.valueOf(5)));
+		inhaltliste.add(new Inhalt("bleistift", "Bleistift", BigDecimal.valueOf(5)));
+		inhaltliste.add(new Inhalt("feder", "Feder", BigDecimal.valueOf(5)));
+		inhaltliste.add(new Inhalt("lineal", "Lineal", BigDecimal.valueOf(5)));
+		inhaltliste.add(new Inhalt("marker", "Marker", BigDecimal.valueOf(5)));
+		inhaltliste.add(new Inhalt("radiergummi", "Radiergummi", BigDecimal.valueOf(5)));
+		inhaltliste.add(new Inhalt("spitzer", "Spitzer", BigDecimal.valueOf(5)));
+	}
+	
+	private Inhalt inhaltloopvar;
+	
+	public Inhalt inhaltloopvar() {
+		return inhaltloopvar;
+	}
+	
+	public void setInhaltloopvar(Inhalt inhaltloopvar) {
+		this.inhaltloopvar = inhaltloopvar;
+	}
 	
     public ArtikelSeite(WOContext context) {
         super(context);

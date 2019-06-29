@@ -7,9 +7,20 @@ import com.webobjects.foundation.NSMutableArray;
 public class Inhalt {
 	private String name;
 	private BigDecimal preis;
+	private String id;
 	
+	public Inhalt(String id, String name, BigDecimal preis) {
+		// TODO Auto-generated constructor stub
+		this.id = id;
+		this.name = name;
+	}
+
 	public String name() {
 		return name;
+	}
+	
+	public String id() {
+		return id;
 	}
 	
 	public BigDecimal preis() {

@@ -1,3 +1,16 @@
+inhaltlist : WORepetition {
+	list = inhaltliste;
+	item = inhaltloopvar;
+}
+
+checkinhalt : WOCheckBox {
+	checked = inhaltloopvar;
+}
+
+inhaltbezeichnung : WOString {
+	value = inhaltloopvar.name;
+}
+
 artikelname : WOString {
 	value = artikelloopvar.bezeichnung;
 }

@@ -15,10 +15,9 @@ public class KundeninfoSeite extends ERXComponent {
     
     Application application = (Application)Application.application();
     
+    private Kunde kunde;
     
-    
-    
-    private String name;
+ private String name;
     
     public String name() {
     	return name;
@@ -48,13 +47,13 @@ public class KundeninfoSeite extends ERXComponent {
     	this.strasse = strasse;
     }
     
-    private Integer plz;
+    private String plz;
     
-    public Integer plz() {
+    public String plz() {
     	return plz;
     }
 
-    public void setPlz(Integer plz) {
+    public void setPlz(String plz) {
     	this.plz = plz;
     }
     
@@ -78,23 +77,15 @@ public class KundeninfoSeite extends ERXComponent {
     	this.telefon = telefon;
     }
 
-    private Integer bemerkungen;
-
-
-
-
-	private Kunde kunde;
+    private String bemerkungen;
     
-    public Integer bemerkungen() {
+    public String bemerkungen() {
     	return bemerkungen;
-    }
-
-    public void setBemerkungen(Integer bemerkungen) {
-    	this.bemerkungen = bemerkungen;
     }
     
     public BestaetigungsSeite kundesubmitted() {
 		BestaetigungsSeite nextpage = pageWithName(BestaetigungsSeite.class);
+		
 		nextpage.setkunde(kunde);
 		return nextpage;
     }

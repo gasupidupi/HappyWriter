@@ -1,3 +1,18 @@
+angabenliste : WOReptition {
+	list = angabenliste;
+	item = angabeloopvar;
+}
+
+angabename : WOString {
+	angabeloopvar.name;
+}
+
+angabewert : WOString {
+	angabeloopvar.wert;
+}
+
+
+
 backbutton : WOHyperlink {
 	action = backbuttonpressed;
 }

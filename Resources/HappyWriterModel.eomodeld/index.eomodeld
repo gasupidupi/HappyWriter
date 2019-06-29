@@ -3,8 +3,8 @@
     adaptorName = JDBC; 
     connectionDictionary = {
         URL = localhost; 
-        deploymentProfile = d; 
-        driver = ""; 
+        deploymentProfile = student; 
+        driver = "com.microsoft.jdbc.sqlserver. SQLServerDriver"; 
         password = student; 
         plugin = ""; 
         username = student; 
@@ -20,7 +20,22 @@
     ); 
     userInfo = {
         "_EntityModeler" = {
+            activeDatabaseConfigName = Default; 
             attributeNamingConvention = {case = CappedCamel; separator = None; }; 
+            databaseConfigs = {
+                Default = {
+                    adaptorName = JDBC; 
+                    connectionDictionary = {
+                        URL = localhost; 
+                        deploymentProfile = student; 
+                        driver = "com.microsoft.jdbc.sqlserver. SQLServerDriver"; 
+                        password = student; 
+                        plugin = ""; 
+                        username = student; 
+                    }; 
+                    prototypeEntityName = EOJDBCMySQLPrototypes; 
+                }; 
+            }; 
             entityNamingConvention = {case = CappedCamel; separator = None; }; 
         }; 
     }; 
