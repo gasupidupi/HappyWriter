@@ -1,7 +1,6 @@
 package your.app;
 
 import com.ibm.icu.math.BigDecimal;
-import com.webobjects.eocontrol.EOEditingContext;
 import com.webobjects.foundation.NSMutableArray;
 
 import er.extensions.appserver.ERXApplication;
@@ -14,33 +13,18 @@ public class Application extends ERXApplication {
 
 	private NSMutableArray<Artikel> artikel;
 	
-	EOEditingContext editingContext = new EOEditingContext();
-	
-	public EOEditingContext getEditingContext() {
-		return editingContext;
-	}
-
 	public Application() {
 		ERXApplication.log.info("Welcome to " + name() + " !");
 		/* ** put your initialization code in here ** */
 		setAllowsConcurrentRequestHandling(true);
 		
-		addArtikel("Etui", BigDecimal.valueOf(5.95));
-		addArtikel("Holzschachtel", BigDecimal.valueOf(7.45));
 		
 		artikel = new NSMutableArray<Artikel>();
-
+		artikel.add(new Artikel("Etui", new BigDecimal(6.95)));
+		artikel.add(new Artikel("Holzschachtel", new BigDecimal(8.50)));
 	}
 	
 	public NSMutableArray<Artikel> getArtikel() {
 		return artikel;
 	}
-	
-    public void addArtikel(String bezeichnung, BigDecimal preis) {
-    	Artikel artikel = new Artikel();
-    	editingContext.insertObject(artikel);
-    	artikel.setBezeichnung(bezeichnung);
-    	artikel.setPreis(7);
-    	
-    }
 }

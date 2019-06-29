@@ -1,10 +1,11 @@
 package your.app.components;
 
 import com.webobjects.appserver.WOContext;
-import your.app.eo.*;
 
 import er.extensions.components.ERXComponent;
 import your.app.Application;
+import your.app.Kunde;
+
 import com.webobjects.appserver.WOComponent;
 
 public class KundeninfoSeite extends ERXComponent {
