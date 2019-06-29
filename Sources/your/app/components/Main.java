@@ -17,7 +17,35 @@ public class Main extends BaseComponent {
 	
 	NSMutableArray<Artikel> artikel = application.getArtikel();
 	
-
+	private Artikel bestellungloopvar;
+	
+	public Artikel bestellungloopvar() {
+		return bestellungloopvar;
+	}
+	
+	public void setBestellungloopvar(Artikel bestellungloopvar) {
+		this.bestellungloopvar = bestellungloopvar;
+	}
+	
+	private String bestellungartikelname;
+	
+	public void setBestellungartikelname(String bestellungartikelname) {
+		this.bestellungartikelname = bestellungartikelname;
+	}
+	
+	public String bestellungartikelname() {
+		return bestellungloopvar.bezeichnung();
+	}
+	
+	private String bestellungartikelpreis;
+	
+	public void setBestellungartikelpreis(String bestellungartikelpreis) {
+		this.bestellungartikelpreis = bestellungartikelpreis;
+	}
+	
+	public String bestellungartikelpreis() {
+		return bestellungloopvar.preis().toString();
+	}
 	
 	private Artikel artikelloopvar;
 	

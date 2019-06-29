@@ -6,10 +6,10 @@ import com.webobjects.foundation.NSMutableArray;
 
 public class Artikel {
 	private String bezeichnung;
-	private com.ibm.icu.math.BigDecimal preis;
+	private java.math.BigDecimal preis;
 	private NSMutableArray<Inhalt> inhalte;
 	
-	public Artikel(String bezeichnung, com.ibm.icu.math.BigDecimal bigDecimal) {
+	public Artikel(String bezeichnung, java.math.BigDecimal bigDecimal) {
 		this.bezeichnung = bezeichnung;
 		this.preis = bigDecimal;
 	}
@@ -18,7 +18,11 @@ public class Artikel {
 		return bezeichnung;
 	}
 	
-	public com.ibm.icu.math.BigDecimal preis() {
+	public void setPreis(java.math.BigDecimal total) {
+		this.preis = total;
+	}
+	
+	public java.math.BigDecimal preis() {
 		return preis;
 	}
 	

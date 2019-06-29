@@ -14,3 +14,16 @@ detaillink : WOHyperlink {
 checkoutbutton : WOHyperlink {
 	action = checkout;
 }
+
+bestellungsliste : WORepetition {
+	list = application.bestellung;
+	item = bestellungloopvar;
+}
+
+bestellungartikelname : WOString {
+	value = bestellungartikelname;
+}
+
+bestellungartikelpreis : WOString {
+	value = bestellungartikelpreis;
+}

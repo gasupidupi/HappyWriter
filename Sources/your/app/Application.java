@@ -19,8 +19,8 @@ public class Application extends ERXApplication {
 		
 		
 		artikel = new NSMutableArray<Artikel>();
-		artikel.add(new Artikel("Etui", new BigDecimal(6.95)));
-		artikel.add(new Artikel("Holzschachtel", new BigDecimal(8.50)));
+		artikel.add(new Artikel("Etui", new java.math.BigDecimal(6.95)));
+		artikel.add(new Artikel("Holzschachtel", new java.math.BigDecimal(8.50)));
 	}
 	
 	public NSMutableArray<Artikel> getArtikel() {
@@ -29,8 +29,18 @@ public class Application extends ERXApplication {
 	
 	NSMutableArray<Artikel> bestellung = new NSMutableArray<Artikel>();
 	
-	public void setBestellung(Artikel bestellung2) {
-		bestellung.add(bestellung2);
+	public void setBestellung(Artikel bestellungRaw) {
+		Artikel calculatedBestellung = calculatePrice(bestellungRaw);
+		bestellung.add(calculatedBestellung);
+	}
+	
+	public Artikel calculatePrice(Artikel artikel) {
+		java.math.BigDecimal total = java.math.BigDecimal.valueOf(0);
+		for(int i = 0; artikel.inhalte().size() < i; i++) {
+			total = artikel.inhalte().get(i).preis().add(total);
+		}
+		artikel.setPreis(total);
+		return artikel;
 	}
 	
 	public NSMutableArray<Artikel> bestellung() {
