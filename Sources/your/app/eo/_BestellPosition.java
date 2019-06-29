@@ -1,4 +1,6 @@
 // DO NOT EDIT.  Make changes to BestellPosition.java instead.
+package your.app.eo;
+
 import com.webobjects.eoaccess.*;
 import com.webobjects.eocontrol.*;
 import com.webobjects.foundation.*;

@@ -7,4 +7,5 @@
  -subclassDestination Sources \
  -subclassJavaTemplate WonderEntity.java \
  -verbose \
- -loadModelGroup
+ -loadModelGroup \
+ -superclassPackage your.app.eo
