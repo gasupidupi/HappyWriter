@@ -5,7 +5,6 @@ import com.webobjects.foundation.NSMutableArray;
 
 import your.app.Application;
 import your.app.Artikel;
-import your.app.Bestellung;
 import your.app.Inhalt;
 
 
@@ -18,7 +17,7 @@ public class Main extends BaseComponent {
 	
 	NSMutableArray<Artikel> artikel = application.getArtikel();
 	
-	NSMutableArray<Bestellung> bestellung;
+
 	
 	private Artikel artikelloopvar;
 	
@@ -30,10 +29,7 @@ public class Main extends BaseComponent {
 		this.artikelloopvar = artikelloopvar;
 	}
 	
-	public void setBestellung(Bestellung bestellung2) {
-		bestellung.add(bestellung2);
-	}
-	
+
 	public ArtikelSeite showdetail() {
 		ArtikelSeite nextpage = pageWithName(ArtikelSeite.class);
 		nextpage.setartikelloopvar(artikelloopvar);

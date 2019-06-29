@@ -7,7 +7,6 @@ import com.webobjects.foundation.NSMutableArray;
 import er.extensions.components.ERXComponent;
 import your.app.Application;
 import your.app.Artikel;
-import your.app.Bestellung;
 import your.app.Inhalt;
 
 import java.math.BigDecimal;
@@ -21,7 +20,7 @@ public class ArtikelSeite extends ERXComponent  {
 	
 	private NSMutableArray<Inhalt> inhaltliste;
 	
-	private NSArray<Inhalt> checkedinhalt;
+	private NSMutableArray<Inhalt> checkedinhalt = new NSMutableArray<Inhalt>();
 	
 	public NSArray<Inhalt> inhaltliste() {
 		return inhaltliste;
@@ -70,7 +69,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedschere(boolean checkedschere) {
     	if(checkedschere) {
-    		checkedinhalt.add(inhaltloopvar);
+    		checkedinhalt.add(new Inhalt("schere", "Schere", BigDecimal.valueOf(5)));
     	}
     	this.checkedschere = checkedschere;
     }
@@ -83,7 +82,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedbleistift(boolean checkedbleistift) {
     	if(checkedbleistift) {
-    		checkedinhalt.add(inhaltloopvar);
+    		checkedinhalt.add(new Inhalt("bleistift", "Bleistift", BigDecimal.valueOf(5)));
     	}
     	this.checkedbleistift = checkedbleistift;
     }
@@ -96,7 +95,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedfeder(boolean checkedfeder) {
     	if(checkedfeder) {
-    		checkedinhalt.add(inhaltloopvar);
+    		checkedinhalt.add(new Inhalt("feder", "Feder", BigDecimal.valueOf(5)));
     	}
     	this.checkedfeder = checkedfeder;
     }
@@ -109,7 +108,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedlineal(boolean checkedlineal) {
     	if(checkedlineal) {
-    		checkedinhalt.add(inhaltloopvar);
+    		checkedinhalt.add(new Inhalt("lineal", "Lineal", BigDecimal.valueOf(5)));
     	}
     	this.checkedlineal = checkedlineal;
     }
@@ -122,7 +121,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedmarker(boolean checkedmarker) {
     	if(checkedmarker) {
-    		checkedinhalt.add(inhaltloopvar);
+    		checkedinhalt.add(new Inhalt("marker", "Marker", BigDecimal.valueOf(5)));
     	}
     	this.checkedmarker = checkedmarker;
     }
@@ -135,7 +134,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedradiergummi(boolean checkedradiergummi) {
     	if(checkedradiergummi) {
-    		checkedinhalt.add(inhaltloopvar);
+    		checkedinhalt.add(new Inhalt("radiergummi", "Radiergummi", BigDecimal.valueOf(5)));
     	}
     	this.checkedradiergummi = checkedradiergummi;
     }
@@ -148,7 +147,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedspitzer(boolean checkedspitzer) {
     	if(checkedspitzer) {
-    		checkedinhalt.add(inhaltloopvar);
+    		checkedinhalt.add(new Inhalt("spitzer", "Spitzer", BigDecimal.valueOf(5)));
     	}
     	this.checkedspitzer = checkedspitzer;
     }
@@ -167,11 +166,8 @@ public class ArtikelSeite extends ERXComponent  {
 		Main nextpage = pageWithName(Main.class);
 		//fix this later
 		//nextpage.setBestellung(artikelloopvar);
-		for(int i = 0; i<inhaltliste.size(); i++) {
-			
-		}
-		Bestellung bestellung = new Bestellung(artikelloopvar, checkedinhalt);
-		nextpage.setBestellung(bestellung);
+		artikelloopvar.setInhalte(checkedinhalt);
+		application.setBestellung(artikelloopvar);
 		return nextpage;
 	}
     

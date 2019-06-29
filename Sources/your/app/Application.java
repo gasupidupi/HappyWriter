@@ -26,4 +26,15 @@ public class Application extends ERXApplication {
 	public NSMutableArray<Artikel> getArtikel() {
 		return artikel;
 	}
+	
+	NSMutableArray<Artikel> bestellung = new NSMutableArray<Artikel>();
+	
+	public void setBestellung(Artikel bestellung2) {
+		bestellung.add(bestellung2);
+	}
+	
+	public NSMutableArray<Artikel> bestellung() {
+		return bestellung;
+	}
+	
 }
