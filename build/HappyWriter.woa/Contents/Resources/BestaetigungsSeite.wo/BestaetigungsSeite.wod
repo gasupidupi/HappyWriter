@@ -1,14 +1,14 @@
-angabenliste : WOReptition {
+angabenliste : WORepetition {
 	list = angabenliste;
 	item = angabeloopvar;
 }
 
 angabename : WOString {
-	angabeloopvar.name;
+	value = angabeloopvar.key;
 }
 
 angabewert : WOString {
-	angabeloopvar.wert;
+	value = angabeloopvar.value;
 }
 
 

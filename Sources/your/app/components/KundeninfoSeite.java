@@ -83,9 +83,13 @@ public class KundeninfoSeite extends ERXComponent {
     	return bemerkungen;
     }
     
+    public void setBemerkungen(String bemerkungen) {
+    	this.bemerkungen = bemerkungen;
+    }
+    
     public BestaetigungsSeite kundesubmitted() {
 		BestaetigungsSeite nextpage = pageWithName(BestaetigungsSeite.class);
-		
+		kunde = new Kunde(name, vorname, strasse, plz, ort, telefon, bemerkungen);
 		nextpage.setkunde(kunde);
 		return nextpage;
     }

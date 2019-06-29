@@ -2,6 +2,8 @@ package your.app.components;
 
 import com.webobjects.appserver.WOContext;
 import com.webobjects.foundation.NSArray;
+import com.webobjects.foundation.NSDictionary;
+import com.webobjects.foundation.NSMutableArray;
 
 import er.extensions.components.ERXComponent;
 import your.app.Application;
@@ -29,25 +31,31 @@ public class BestaetigungsSeite extends ERXComponent {
 	
 	
 	
-	private Kunde kundeloopvar;
+	private Angabe angabeloopvar;
 	
-	private NSArray<String> angabenliste;
+	private NSMutableArray<Angabe> angabenliste = new NSMutableArray<Angabe>();
 	
-	public NSArray<String> angabenliste() {
+	public NSArray<Angabe> angabenliste() {
 		return fillangabenliste();
 	}
 	
-	public NSArray<String> fillangabenliste() {
-		angabenliste.add("");
+	public NSArray<Angabe> fillangabenliste() {
+		angabenliste.add(new Angabe("Name", kunde.name()));
+		angabenliste.add(new Angabe("Vorname", kunde.vorname()));
+		angabenliste.add(new Angabe("Strasse", kunde.strasse()));
+		angabenliste.add(new Angabe("PLZ", kunde.plz()));
+		angabenliste.add(new Angabe("Ort", kunde.ort()));
+		angabenliste.add(new Angabe("Telefon", kunde.telefon()));
+		angabenliste.add(new Angabe("Bemerkungen", kunde.bemerkungen()));
 		return angabenliste;
 	}
 	
-	public Kunde kundeloopvar() {
-		return kundeloopvar;
+	public Angabe angabeloopvar() {
+		return angabeloopvar;
 	}
 	
-	public void setKundeloopvar(Kunde kundeloopvar) {
-		this.kundeloopvar = kundeloopvar;
+	public void setAngabeloopvar(Angabe angabeloopvar) {
+		this.angabeloopvar = angabeloopvar;
 	}
 	
 	

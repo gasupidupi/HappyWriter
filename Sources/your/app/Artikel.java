@@ -7,6 +7,7 @@ import com.webobjects.foundation.NSMutableArray;
 public class Artikel {
 	private String bezeichnung;
 	private com.ibm.icu.math.BigDecimal preis;
+	private NSMutableArray<Inhalt> inhalte;
 	
 	public Artikel(String bezeichnung, com.ibm.icu.math.BigDecimal bigDecimal) {
 		this.bezeichnung = bezeichnung;
@@ -23,6 +24,10 @@ public class Artikel {
 	
 	public String icon() {
 		return null;
+	}
+	
+	public void setInhalte(NSMutableArray<Inhalt> inhalte) {
+		this.inhalte = inhalte;
 	}
 	
 	public NSMutableArray<Inhalt> inhalte() {
