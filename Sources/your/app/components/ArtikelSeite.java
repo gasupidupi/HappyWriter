@@ -1,12 +1,12 @@
 package your.app.components;
 
+import your.app.eo.*;
 import com.webobjects.appserver.WOContext;
 import com.webobjects.foundation.NSArray;
 
 import er.extensions.components.ERXComponent;
 import your.app.Application;
-import your.app.Artikel;
-import your.app.Inhalt;
+
 
 import java.math.BigDecimal;
 
@@ -24,6 +24,7 @@ public class ArtikelSeite extends ERXComponent  {
 	}
 	
 	public void setPossibleinhalt() {
+		/*
 		inhaltliste.add(new Inhalt("schere", "Schere", BigDecimal.valueOf(5)));
 		inhaltliste.add(new Inhalt("bleistift", "Bleistift", BigDecimal.valueOf(5)));
 		inhaltliste.add(new Inhalt("feder", "Feder", BigDecimal.valueOf(5)));
@@ -31,6 +32,9 @@ public class ArtikelSeite extends ERXComponent  {
 		inhaltliste.add(new Inhalt("marker", "Marker", BigDecimal.valueOf(5)));
 		inhaltliste.add(new Inhalt("radiergummi", "Radiergummi", BigDecimal.valueOf(5)));
 		inhaltliste.add(new Inhalt("spitzer", "Spitzer", BigDecimal.valueOf(5)));
+		*/
+		
+
 	}
 	
 	private Inhalt inhaltloopvar;

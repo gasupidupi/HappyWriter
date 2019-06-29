@@ -1,14 +1,11 @@
 package your.app.components;
 
+import your.app.eo.*;
 import com.webobjects.appserver.WOContext;
 import com.webobjects.foundation.NSArray;
 
 import er.extensions.components.ERXComponent;
 import your.app.Application;
-import your.app.Artikel;
-import your.app.Inhalt;
-import your.app.Kunde;
-
 import java.math.BigDecimal;
 
 import com.webobjects.appserver.WOComponent;
