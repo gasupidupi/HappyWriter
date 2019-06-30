@@ -34,6 +34,7 @@ public class ArtikelSeite extends ERXComponent  {
 		inhaltliste.add(new Inhalt("marker", "Marker", 5));
 		inhaltliste.add(new Inhalt("radiergummi", "Radiergummi", 5));
 		inhaltliste.add(new Inhalt("spitzer", "Spitzer", 5));
+		inhaltliste.add(new Inhalt("zirkel", "Zirkel", 5));
 	}
 	
 	private Inhalt inhaltloopvar;
@@ -159,7 +160,9 @@ public class ArtikelSeite extends ERXComponent  {
     }
     
     public void setCheckedzirkel(boolean checkedzirkel) {
-    	this.checkedzirkel = checkedzirkel;
+    	if(checkedzirkel) {
+    		checkedinhalt.add(new Inhalt("zirkel", "Zirkel", 5));
+    	}
     }
     
 	public Main inhaltsubmitted() {
