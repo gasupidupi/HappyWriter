@@ -1,5 +1,7 @@
 package your.app;
 
+import java.math.BigDecimal;
+
 import com.webobjects.foundation.NSMutableArray;
 
 import er.extensions.appserver.ERXApplication;
@@ -44,6 +46,11 @@ public class Application extends ERXApplication {
 	
 	public NSMutableArray<Artikel> bestellung() {
 		return bestellung;
+	}
+
+	public void setArtikel(Artikel artikel) {
+		// TODO Auto-generated method stub
+		this.artikel.add(artikel);
 	}
 	
 }

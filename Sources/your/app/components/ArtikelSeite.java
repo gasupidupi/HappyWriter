@@ -167,7 +167,10 @@ public class ArtikelSeite extends ERXComponent  {
 		//fix this later
 		//nextpage.setBestellung(artikelloopvar);
 		artikelloopvar.setInhalte(checkedinhalt);
-		application.setBestellung(artikelloopvar);
+		Artikel newartikelloopvar = new Artikel(artikelloopvar.bezeichnung(), artikelloopvar.preis());
+		application.setArtikel(newartikelloopvar);
+		nextpage.setArtikelloopvar(newartikelloopvar);
+		application.setBestellung(newartikelloopvar);
 		return nextpage;
 	}
     
