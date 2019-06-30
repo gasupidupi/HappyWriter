@@ -88,6 +88,7 @@ public class BestaetigungsSeite extends ERXComponent {
 	 */
 	public DankesSeite bestaetigungsubmitted() {
 		DankesSeite nextpage = pageWithName(DankesSeite.class);
+		session().terminate();
 		return nextpage;
 	}
 }

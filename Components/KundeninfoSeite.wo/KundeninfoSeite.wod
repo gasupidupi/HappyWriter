@@ -2,7 +2,7 @@ kundenform : WOForm {
 	multipleSubmit = true;
 }
 
-backbutton : WOSubmitButton {
+backbutton : WOHyperlink {
 	action = backbuttonpressed;
 }
 

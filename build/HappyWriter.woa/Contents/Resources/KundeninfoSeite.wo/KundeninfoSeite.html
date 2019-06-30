@@ -1,36 +1,65 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <html>
 	<head>
+		<style>
+body {
+	padding: 5%;
+}
+ul {
+	list-style-type: none;
+}
+.content {
+	border: 1px solid rgb(68,174,206);
+	padding: 5%;
+}
+h1 {
+	text-decoration: underline;
+	padding-bottom: 2.5%;
+	display: inline-block;
+}
+#login {
+	position: relative;
+	float: right;
+}
+input[type="image"] {
+	margin: 2.5%;
+}
+.line {
+	border-bottom: 1px solid rgb(68,174,206);
+}
+
+</style>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<title>Artikel</title>
 	</head>
 	<body>
 	<h1>Bitte füllen Sie Ihre Angaben ein</h1>
-	
+
 	<webobject name = "kundenform">
-		
+
 		<label for="name">Name</label><br>
 		<webobject name = "name"></webobject><br>
 
 		<label for="vorname">Vorname</label><br>
 		<webobject name = "vorname"></webobject><br>
-		
+
 		<label for="strasse">Strasse</label><br>
 		<webobject name = "strasse"></webobject><br>
-		
+
 		<label for="plz">PLZ</label><br>
 		<webobject name = "plz"></webobject><br>
 
 		<label for="ort">Ort</label><br>
 		<webobject name = "ort"></webobject><br>
-		
+
 		<label for="telefon">Telefon</label><br>
 		<webobject name = "telefon"></webobject><br>
 
 		<label for="bermerkungen">Bemerkungen</label><br>
 		<webobject name = "bemerkungen"></webobject><br>
 
-		<webobject name = "submitbutton">Submit</webobject><br>
-		<webobject name = "backbutton">Cancel</webobject><br>
+		<webobject name = "submitbutton">Bestätigen</webobject><br>
+		<webobject name = "backbutton">Abbrechen</webobject><br>
 
 	</webobject>
 
