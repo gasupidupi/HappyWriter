@@ -10,6 +10,7 @@ import your.app.Application;
 import your.app.Artikel;
 import your.app.Inhalt;
 import your.app.Kunde;
+import your.app.Session;
 
 import java.math.BigDecimal;
 
@@ -25,6 +26,9 @@ public class BestaetigungsSeite extends ERXComponent {
     
     //Simpleton application
     Application application = (Application)Application.application();
+    
+    //Simpleton session
+    Session session = (Session)session();
 
 	public BestaetigungsSeite(WOContext context) {
         super(context);

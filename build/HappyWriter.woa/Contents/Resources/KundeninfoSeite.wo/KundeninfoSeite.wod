@@ -6,7 +6,7 @@ backbutton : WOHyperlink {
 	action = backbuttonpressed;
 }
 
-submitbutton : WOHyperlink {
+submitbutton : WOSubmitButton {
 	action = kundesubmitted;
 }
 

@@ -13,4 +13,9 @@ public class Session extends ERXSession {
 		return (Application)super.application();
 	}
 	
+	public void terminate() {
+		System.out.println("Session terminating...");
+		super.terminate();
+	}
+	
 }
