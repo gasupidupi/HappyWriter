@@ -15,6 +15,12 @@ public class Inhalt {
 		this.name = name;
 		this.preis = preis;
 	}
+	
+	public Inhalt(String id, String name) {
+		// TODO Auto-generated constructor stub
+		this.id = id;
+		this.name = name;
+	}
 
 	public String name() {
 		return name;

@@ -20,8 +20,8 @@ public class Application extends ERXApplication {
 		
 		
 		artikel = new NSMutableArray<Artikel>();
-		artikel.add(new Artikel("Etui", 6.95));
-		artikel.add(new Artikel("Holzschachtel", 8.50));
+		artikel.add(new Artikel("Etui", (double) 6.95));
+		artikel.add(new Artikel("Holzschachtel", (double) 8.50));
 	}
 	
 	public NSMutableArray<Artikel> getArtikel() {

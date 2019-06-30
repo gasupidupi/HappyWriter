@@ -9,11 +9,17 @@ public class Artikel {
 	private double preis;
 	private NSMutableArray<Inhalt> inhalte;
 	
+	public Artikel(String bezeichnung, double d, NSMutableArray<Inhalt> inhalte) {
+		this.bezeichnung = bezeichnung;
+		this.preis = d;
+		this.inhalte = inhalte;
+	}
+	
 	public Artikel(String bezeichnung, double d) {
 		this.bezeichnung = bezeichnung;
 		this.preis = d;
 	}
-	
+
 	public String bezeichnung() {
 		return bezeichnung;
 	}
