@@ -9,7 +9,7 @@ import com.webobjects.appserver.WOComponent;
 /**
  * 
  * Dies ist der Controller der Dankesseite. 
- * Die Dankesseite hat keine Funktionalität. Hier wird der Kunde für den Einkauf bedankt.
+ * Die Dankesseite hat keine logische Funktionalität. Hier wird der Kunde für den Einkauf bedankt.
  *
  */
 public class DankesSeite extends ERXComponent {

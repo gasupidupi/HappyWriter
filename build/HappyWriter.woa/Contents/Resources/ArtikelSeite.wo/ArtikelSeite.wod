@@ -52,3 +52,7 @@ inhaltform : WOForm {
 backbutton : WOHyperlink {
 	action = backbuttonpressed;
 }
+
+artikelicon : WOImage {
+	filename = icon;
+}

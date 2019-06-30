@@ -229,4 +229,8 @@ public class ArtikelSeite extends ERXComponent  {
 		Main nextpage = pageWithName(Main.class);
 		return nextpage;
 	}
+	
+	public String icon() {
+		return artikelloopvar.icon();
+	}
 }

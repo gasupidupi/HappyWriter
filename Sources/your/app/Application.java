@@ -1,6 +1,5 @@
 package your.app;
 
-import java.math.BigDecimal;
 
 import com.webobjects.foundation.NSMutableArray;
 
@@ -28,8 +27,8 @@ public class Application extends ERXApplication {
 		
 		//Artikel in die Liste einfügen
 		artikel = new NSMutableArray<Artikel>();
-		artikel.add(new Artikel("Etui", (double) 6.95));
-		artikel.add(new Artikel("Holzschachtel", (double) 8.50));
+		artikel.add(new Artikel("Etui", (double) 6.95, "etui.png"));
+		artikel.add(new Artikel("Holzschachtel", (double) 8.50, "holzschachtel.png"));
 	}
 	
 	public NSMutableArray<Artikel> getArtikel() {

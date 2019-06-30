@@ -3,14 +3,6 @@ artikellist : WORepetition {
 	item = artikelloopvar;
 }
 
-bezeichnung : WOString {
-	value = artikelloopvar.bezeichnung;
-}
-
-detaillink : WOHyperlink {
-	action = showdetail;
-}
-
 checkoutbutton : WOHyperlink {
 	action = checkout;
 }
@@ -30,4 +22,14 @@ bestellungartikelpreis : WOString {
 
 loginLink : WOHyperlink {
 	action = login;
+}
+
+detailimagebuttons : WOImageButton {
+	action = showdetail;
+	filename = icon;
+	framework = "app";
+}
+
+detaillinkIfImagebuttonNotWork : WOHyperlink {
+	action = showdetail;
 }

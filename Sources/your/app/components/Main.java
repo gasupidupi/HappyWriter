@@ -74,6 +74,10 @@ public class Main extends BaseComponent {
 		return artikelloopvar;
 	}
 	
+	public String icon() {
+		return artikelloopvar.icon();
+	}
+	
 	public void setArtikelloopvar(Artikel artikelloopvar) {
 		this.artikelloopvar = artikelloopvar;
 	}

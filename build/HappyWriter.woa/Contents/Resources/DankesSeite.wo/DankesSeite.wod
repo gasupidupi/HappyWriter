@@ -1,0 +1,3 @@
+dankesbild : WOImage {
+	filename = "dankesbild.png";
+}

@@ -13,6 +13,7 @@ public class Artikel {
 	private String bezeichnung;
 	private double preis;
 	private NSMutableArray<Inhalt> inhalte;
+	private String icon;
 	
 	public Artikel(String bezeichnung, double d, NSMutableArray<Inhalt> inhalte) {
 		this.bezeichnung = bezeichnung;
@@ -20,9 +21,10 @@ public class Artikel {
 		this.inhalte = inhalte;
 	}
 	
-	public Artikel(String bezeichnung, double d) {
+	public Artikel(String bezeichnung, double d, String icon) {
 		this.bezeichnung = bezeichnung;
 		this.preis = d;
+		this.icon = icon;
 	}
 
 	public String bezeichnung() {
@@ -38,7 +40,7 @@ public class Artikel {
 	}
 	
 	public String icon() {
-		return null;
+		return icon;
 	}
 	
 	public void setInhalte(NSMutableArray<Inhalt> inhalte) {

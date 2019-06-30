@@ -9,7 +9,7 @@ import com.webobjects.appserver.WOComponent;
 
 /**
  * 
- * Das ist der Controller der Loginseite. Auf die Seite kommt man wenn man auf die Administrationsseite zugreiffen will.
+ * Das ist der Controller der Loginseite. Auf die Seite kommt man, wenn man auf die Administrationsseite zugreifen will.
  * 
  *
  */
