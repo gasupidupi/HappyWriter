@@ -48,3 +48,7 @@ submitbutton : WOSubmitButton {
 inhaltform : WOForm {
 	multipleSubmit = true;
 }
+
+backbutton : WOHyperlink {
+	action = backbuttonpressed;
+}

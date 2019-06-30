@@ -177,4 +177,8 @@ public class ArtikelSeite extends ERXComponent  {
 		return nextpage;
 	}
     
+	public Main backbuttonpressed() {
+		Main nextpage = pageWithName(Main.class);
+		return nextpage;
+	}
 }
