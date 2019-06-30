@@ -4,6 +4,11 @@ import java.math.BigDecimal;
 
 import com.webobjects.foundation.NSMutableArray;
 
+/**
+ * 
+ * Diese Methode dient als Ersatz der Tabelle Artikel, falls die Datenbank nicht implementiert wurde.
+ *
+ */
 public class Artikel {
 	private String bezeichnung;
 	private double preis;

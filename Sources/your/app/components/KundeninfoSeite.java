@@ -8,16 +8,27 @@ import your.app.Kunde;
 
 import com.webobjects.appserver.WOComponent;
 
+/**
+ * Das ist der Controller der Kundeninfoseite.
+ * Auf der Kundeninfoseite kann der Kunde seine Daten angeben.
+ *
+ */
 public class KundeninfoSeite extends ERXComponent {
     public KundeninfoSeite(WOContext context) {
         super(context);
     }
     
+    //simpleton application
     Application application = (Application)Application.application();
     
+    /**
+     * Der aktuelle Kunde, der die Daten angibt.
+     */
     private Kunde kunde;
     
- private String name;
+    
+    //Angaben des Kunde bis zum Kommentarstrich
+    private String name;
     
     public String name() {
     	return name;
@@ -86,7 +97,14 @@ public class KundeninfoSeite extends ERXComponent {
     public void setBemerkungen(String bemerkungen) {
     	this.bemerkungen = bemerkungen;
     }
+    //------------------------------------------------------------------------------------
     
+    /**
+     * Diese Methode wird aufgerufen wenn der Submitbutton betätigt wird.
+     * In dieser Methode wird die Bestätigunsseite initialisiert, der Kunde wird initialisiert und der Bestätigungsseite übergeben, 
+     * die anschliessend aufgerufen wird.
+     * 
+     */
     public BestaetigungsSeite kundesubmitted() {
 		BestaetigungsSeite nextpage = pageWithName(BestaetigungsSeite.class);
 		kunde = new Kunde(name, vorname, strasse, plz, ort, telefon, bemerkungen);
@@ -94,6 +112,11 @@ public class KundeninfoSeite extends ERXComponent {
 		return nextpage;
     }
     
+    /**
+     * Diese Methode wird aufgerufen wenn der Backbutton betätigt wird.
+     * Es wird die Main Seite aufgerufen.
+     * 
+     */
     public Main backbuttonpressed() {
     	Main nextpage = pageWithName(Main.class);
 		return nextpage;	

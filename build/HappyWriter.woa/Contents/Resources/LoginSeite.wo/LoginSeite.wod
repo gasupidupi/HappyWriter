@@ -1,0 +1,23 @@
+loginForm : WOForm {
+	multipleSubmit = true;
+}
+
+username : WOTextField {
+	value = username;
+}
+
+password : WOPasswordField {
+	value = password;
+}
+
+submitLogin : WOSubmitButton {
+	action = loginSubmitted;
+}
+
+errorText : WOString {
+	value = errorText;
+}
+
+backbutton : WOHyperlink {
+	action = backbuttonpressed;
+}

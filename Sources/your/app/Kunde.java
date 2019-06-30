@@ -4,7 +4,8 @@
 package your.app;
 
 /**
- * @author ADMIN
+ * 
+ * Diese Methode dient als Ersatz der Tabelle Kunde, falls die Datenbank nicht implementiert wurde.
  *
  */
 public class Kunde {

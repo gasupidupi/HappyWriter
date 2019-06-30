@@ -13,30 +13,75 @@ import java.math.BigDecimal;
 
 import com.webobjects.appserver.WOComponent;
 
+/**
+ * 
+ * Diese Klasse dient als Controller der Artikelseite. 
+ * Auf der Artikelseite können Inhalte des Artikels ausgewählt werden. 
+ *
+ */
+
 //extends ERXComponent: Hilfe von Markus Ruggiero angefordert
 public class ArtikelSeite extends ERXComponent  {
 	
+    public ArtikelSeite(WOContext context) {
+        super(context);
+    }
+    
+    /**
+     * Das ist der simpleton application. Also das Objekt der Application Klasse.
+     */
+    Application application = (Application)Application.application();
+	
+	/**
+	 * Die Loopvariable für den aktuellen Artikel. Der Name dient nur als wiedererkennungsgründen, weil
+	 * nur auf der Main eine Liste mit entsprechender Aufzählung der Artikel existiert und die Main den ausgewählten
+	 * Artikel der Artikelseite weitergibt.
+	 */
 	private Artikel artikelloopvar;
 	
+	/**
+	 * In der inhaltliste werden alle möglichen Inhalte gespeichert.
+	 * Leider wird diese Liste nicht funktional eingebaut, jedoch könnte man diese beispielsweise in die Application
+	 * Klasse verschieben, damit die Administrationsseite darauf zugreiffen könnte.
+	 */
 	private NSMutableArray<Inhalt> inhaltliste;
 	
+	/**
+	 * In der checkedinhalt Liste wird gespeichert welche Inhalte auf der Seite anhand von checkboxen ausgewählt wurden.
+	 */
 	private NSMutableArray<Inhalt> checkedinhalt = new NSMutableArray<Inhalt>();
 	
 	public NSArray<Inhalt> inhaltliste() {
 		return inhaltliste;
 	}
+
+	//Hier sind die Variabeln der Inhalte angebracht damit ich sie für die Inhaltliste und den Checkboxen verwenden kann.
+	Inhalt schere = new Inhalt("schere", "Schere", 5);
+	Inhalt bleistift = new Inhalt("bleistift", "Bleistift", 5);
+	Inhalt feder = new Inhalt("feder", "Feder", 5);
+	Inhalt lineal = new Inhalt("lineal", "Lineal", 5);
+	Inhalt marker = new Inhalt("marker", "Marker", 5);
+	Inhalt radiergummi = new Inhalt("radiergummi", "Radiergummi", 5);
+	Inhalt spitzer = new Inhalt("spitzer", "Spitzer", 5);
+	Inhalt zirkel = new Inhalt("zirkel", "Zirkel", 5);
 	
+	/**
+	 * Hier werden alle möglichen Inhalte in die inhaltliste beigefügt. Es dient der WORepetition um alle Inhalte auf der Seite anzuzeigen.
+	 */
 	public void setPossibleinhalt() {
-		inhaltliste.add(new Inhalt("schere", "Schere", 5));
-		inhaltliste.add(new Inhalt("bleistift", "Bleistift", 5));
-		inhaltliste.add(new Inhalt("feder", "Feder", 5));
-		inhaltliste.add(new Inhalt("lineal", "Lineal", 5));
-		inhaltliste.add(new Inhalt("marker", "Marker", 5));
-		inhaltliste.add(new Inhalt("radiergummi", "Radiergummi", 5));
-		inhaltliste.add(new Inhalt("spitzer", "Spitzer", 5));
-		inhaltliste.add(new Inhalt("zirkel", "Zirkel", 5));
+		inhaltliste.add(schere);
+		inhaltliste.add(bleistift);
+		inhaltliste.add(feder);
+		inhaltliste.add(lineal);
+		inhaltliste.add(marker);
+		inhaltliste.add(radiergummi);
+		inhaltliste.add(spitzer);
+		inhaltliste.add(zirkel);
 	}
 	
+	/**
+	 * Die Inhalt Loopvariable dient der WORepetition bzw. der Auflistung aller Inhalte.
+	 */
 	private Inhalt inhaltloopvar;
 	
 	public Inhalt inhaltloopvar() {
@@ -46,13 +91,8 @@ public class ArtikelSeite extends ERXComponent  {
 	public void setInhaltloopvar(Inhalt inhaltloopvar) {
 		this.inhaltloopvar = inhaltloopvar;
 	}
-	
-    public ArtikelSeite(WOContext context) {
-        super(context);
-    }
-    
-    Application application = (Application)Application.application();
-    
+
+	//Die Artikelloopvariable wird von der Main Seite übergeben. Deswegen wird es in dieser Klasse nicht initialisert.
 	public Artikel artikelloopvar() {
 		return artikelloopvar;
 	}
@@ -62,6 +102,8 @@ public class ArtikelSeite extends ERXComponent  {
     	this.artikelloopvar = artikelloopvar;
     }
     
+    /*Von hier bis zur kommentierten Linie wird geprüft ob die checkbox aktiviert wurde. Diese Art der Implementation hinderte auch die Umsetzung der Administrationsseite,
+    weil man somit nicht einfach einen neuen Inhalt hinzufügen kann.*/
     private boolean checkedschere;
     
     public boolean checkedschere() {
@@ -70,7 +112,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedschere(boolean checkedschere) {
     	if(checkedschere) {
-    		checkedinhalt.add(new Inhalt("schere", "Schere", 5));
+    		checkedinhalt.add(schere);
     	}
     	this.checkedschere = checkedschere;
     }
@@ -83,7 +125,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedbleistift(boolean checkedbleistift) {
     	if(checkedbleistift) {
-    		checkedinhalt.add(new Inhalt("bleistift", "Bleistift", 5));
+    		checkedinhalt.add(bleistift);
     	}
     	this.checkedbleistift = checkedbleistift;
     }
@@ -96,7 +138,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedfeder(boolean checkedfeder) {
     	if(checkedfeder) {
-    		checkedinhalt.add(new Inhalt("feder", "Feder", 5));
+    		checkedinhalt.add(feder);
     	}
     	this.checkedfeder = checkedfeder;
     }
@@ -109,7 +151,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedlineal(boolean checkedlineal) {
     	if(checkedlineal) {
-    		checkedinhalt.add(new Inhalt("lineal", "Lineal", 5));
+    		checkedinhalt.add(lineal);
     	}
     	this.checkedlineal = checkedlineal;
     }
@@ -122,7 +164,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedmarker(boolean checkedmarker) {
     	if(checkedmarker) {
-    		checkedinhalt.add(new Inhalt("marker", "Marker", 5));
+    		checkedinhalt.add(marker);
     	}
     	this.checkedmarker = checkedmarker;
     }
@@ -135,7 +177,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedradiergummi(boolean checkedradiergummi) {
     	if(checkedradiergummi) {
-    		checkedinhalt.add(new Inhalt("radiergummi", "Radiergummi", 5));
+    		checkedinhalt.add(radiergummi);
     	}
     	this.checkedradiergummi = checkedradiergummi;
     }
@@ -148,7 +190,7 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedspitzer(boolean checkedspitzer) {
     	if(checkedspitzer) {
-    		checkedinhalt.add(new Inhalt("spitzer", "Spitzer", 5));
+    		checkedinhalt.add(spitzer);
     	}
     	this.checkedspitzer = checkedspitzer;
     }
@@ -161,22 +203,28 @@ public class ArtikelSeite extends ERXComponent  {
     
     public void setCheckedzirkel(boolean checkedzirkel) {
     	if(checkedzirkel) {
-    		checkedinhalt.add(new Inhalt("zirkel", "Zirkel", 5));
+    		checkedinhalt.add(zirkel);
     	}
     }
+    //---------------------------------------------------------------------------------------------------------
     
+    /**
+     * Sobald der Submitbutton betätigt wird, wird diese Methode aufgerufen. Sie fügt die angekreuzten Inhalte dem
+     * Artikel hinzu und übergibt den Artikel der Main Seite. Anschliessend wird die Bestellungsliste, die in der Application zu finden ist,
+     * um den Artikel erweitert. Schlussendlich wird die Main Seite aufgerufen.
+     */
 	public Main inhaltsubmitted() {
 		Main nextpage = pageWithName(Main.class);
-		//fix this later
-		//nextpage.setBestellung(artikelloopvar);
 		artikelloopvar.setInhalte(checkedinhalt);
 		Artikel newartikelloopvar = new Artikel(artikelloopvar.bezeichnung(), artikelloopvar.preis(), artikelloopvar.inhalte());
-		//application.setArtikel(newartikelloopvar);
 		nextpage.setArtikelloopvar(newartikelloopvar);
 		application.setBestellung(newartikelloopvar);
 		return nextpage;
 	}
     
+	/**
+	 * Sobald der Backbutton auf der Artikelseite betätgit wird, navigiert die Applikation zu der Main Seite.
+	 */
 	public Main backbuttonpressed() {
 		Main nextpage = pageWithName(Main.class);
 		return nextpage;

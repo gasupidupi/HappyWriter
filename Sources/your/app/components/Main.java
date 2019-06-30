@@ -7,16 +7,28 @@ import your.app.Application;
 import your.app.Artikel;
 import your.app.Inhalt;
 
-
+/**
+ * Das ist der Controller der Main Seite.
+ * Auf der Seite erreicht man als erstes. Hier kann man einen Artikel auswählen und den Warenkorb betrachten.
+ * Anhand eines Hyperlinks gelängt man zu der Loginseite oder zum checkout.
+ *
+ */
 public class Main extends BaseComponent {
 	public Main(WOContext context) {
 		super(context);
 	}
 	
+	//simpleton application
 	Application application = (Application)Application.application();
 	
+	/**
+	 * Hier sind alle auswählbaren Artikel gespeichert.
+	 */
 	NSMutableArray<Artikel> artikel = application.getArtikel();
 	
+	/**
+	 * Die Bestellungsloopvariable dient der WORepetition.
+	 */
 	private Artikel bestellungloopvar;
 	
 	public Artikel bestellungloopvar() {
@@ -27,6 +39,9 @@ public class Main extends BaseComponent {
 		this.bestellungloopvar = bestellungloopvar;
 	}
 	
+	/**
+	 * Der Name des Objektes im Warenkorb.
+	 */
 	private String bestellungartikelname;
 	
 	public void setBestellungartikelname(String bestellungartikelname) {
@@ -37,6 +52,9 @@ public class Main extends BaseComponent {
 		return bestellungloopvar.bezeichnung();
 	}
 	
+	/**
+	 * Der Preis des Objektes im Warenkorb.
+	 */
 	private String bestellungartikelpreis;
 	
 	public void setBestellungartikelpreis(String bestellungartikelpreis) {
@@ -47,6 +65,9 @@ public class Main extends BaseComponent {
 		return String.valueOf(bestellungloopvar.preis());
 	}
 	
+	/**
+	 * Die Artikelloopvariable dient der WORepetition.
+	 */
 	private Artikel artikelloopvar;
 	
 	public Artikel artikelloopvar() {
@@ -57,15 +78,29 @@ public class Main extends BaseComponent {
 		this.artikelloopvar = artikelloopvar;
 	}
 	
-
+	/**
+	 * Sobald ein Artikel ausgewählt wurde, wird der Artikel der Artikelseite übergeben, die anschliessend aufgerufen wird.
+	 * 
+	 */
 	public ArtikelSeite showdetail() {
 		ArtikelSeite nextpage = pageWithName(ArtikelSeite.class);
 		nextpage.setartikelloopvar(artikelloopvar);
 		return nextpage;
 	}
 	
+	/**
+	 * Wenn man den Hyperlink checkout betätigt wird die Kundeninfoseite aufgerufen.
+	 */
 	public KundeninfoSeite checkout() {
 		KundeninfoSeite nextpage = pageWithName(KundeninfoSeite.class);
+		return nextpage;
+	}
+	
+	/**
+	 * Wenn man den Hyperlink login betätigt wird die Loginseite aufgerufen.
+	 */
+	public LoginSeite login() {
+		LoginSeite nextpage = pageWithName(LoginSeite.class);
 		return nextpage;
 	}
 }

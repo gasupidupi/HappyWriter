@@ -6,11 +6,19 @@ import com.webobjects.foundation.NSMutableArray;
 
 import er.extensions.appserver.ERXApplication;
 
+/**
+ * 
+ * Diese Klasse wird als erstes aufgerufen. Es ist in den Controller als Simpleton aufrufbar.
+ *
+ */
 public class Application extends ERXApplication {
 	public static void main(String[] argv) {
 		ERXApplication.main(argv, Application.class);
 	}
 
+	/**
+	 * Alle zu verkaufenden Artikel.
+	 */
 	private NSMutableArray<Artikel> artikel;
 	
 	public Application() {
@@ -18,7 +26,7 @@ public class Application extends ERXApplication {
 		/* ** put your initialization code in here ** */
 		setAllowsConcurrentRequestHandling(true);
 		
-		
+		//Artikel in die Liste einfügen
 		artikel = new NSMutableArray<Artikel>();
 		artikel.add(new Artikel("Etui", (double) 6.95));
 		artikel.add(new Artikel("Holzschachtel", (double) 8.50));
@@ -28,6 +36,9 @@ public class Application extends ERXApplication {
 		return artikel;
 	}
 	
+	/**
+	 * Der Warenkorb. Hier werden ausgewählte Artikel gespeichert.
+	 */
 	NSMutableArray<Artikel> bestellung = new NSMutableArray<Artikel>();
 	
 	public void setBestellung(Artikel bestellungRaw) {
@@ -35,11 +46,17 @@ public class Application extends ERXApplication {
 		bestellung.add(calculatedBestellung);
 	}
 	
+	/**
+	 * In dieser Methode wird der Preis berechnet.
+	 */
 	public Artikel calculatePrice(Artikel artikel2) {
+		//Zuerst wird der Preis des angegebenen Artikel selbst zum Total hinzugefügt.
 		long total = (long) artikel2.preis();
+		//Es wird jeder Inhalt iteriert und der Preis davon zum Total addiert.
 		for(int i = 0; artikel2.inhalte().count() > i; i++) {
 			total = artikel2.inhalte().get(i).preis() + total;
 		}
+		//Das Total wird als neuer bzw. eigentliche Preis des Artikels eingefügt.
 		artikel2.setPreis(total);
 		return artikel2;
 	}

@@ -4,6 +4,11 @@ package your.app;
 
 import com.webobjects.foundation.NSMutableArray;
 
+/**
+ * 
+ * Diese Methode dient als Ersatz der Tabelle Inhalt, falls die Datenbank nicht implementiert wurde.
+ *
+ */
 public class Inhalt {
 	private String name;
 	private long preis;

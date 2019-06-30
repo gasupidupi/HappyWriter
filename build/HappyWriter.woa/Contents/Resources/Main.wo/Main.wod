@@ -27,3 +27,7 @@ bestellungartikelname : WOString {
 bestellungartikelpreis : WOString {
 	value = bestellungartikelpreis;
 }
+
+loginLink : WOHyperlink {
+	action = login;
+}
