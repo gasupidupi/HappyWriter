@@ -11,6 +11,7 @@ ul {
 .content {
 	border: 1px solid rgb(68,174,206);
 	padding: 5%;
+	color: rgb(33,93,112);
 }
 h1 {
 	text-decoration: underline;
@@ -27,10 +28,18 @@ input[type="image"] {
 .line {
 	border-bottom: 1px solid rgb(68,174,206);
 }
-
+label {
+	padding-top: 2.5%;
+	margin-right: 2.5%;
+	width: 10%;
+}
+.space {
+	display: inline;
+	padding: 2.5%;
+}
 </style>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<title>Artikel</title>
+		<title>Kundeninformationen</title>
 	</head>
 	<body>
 			<div class="content">
@@ -38,29 +47,32 @@ input[type="image"] {
 
 	<webobject name = "kundenform">
 
-		<label for="name">Name</label><br>
-		<webobject name = "name"></webobject><br>
+		<label for="name">Name:</label>
+		<webobject name = "name"></webobject>
+		<div class="space"></div>
+		<label for="vorname">Vorname:</label>
+		<webobject name = "vorname"></webobject>
+		<br>
+		<label for="strasse">Strasse:</label>
+		<webobject name = "strasse"></webobject>
+		<div class="space"></div>
+		<label for="plz">PLZ:</label>
+		<webobject name = "plz"></webobject>
+		<br>
+		<label for="ort">Ort:</label>
+		<webobject name = "ort"></webobject>
+		<div class="space"></div>
+		<label for="telefon">Telefon:</label>
+		<webobject name = "telefon"></webobject>
+		<br>
+		<label for="bermerkungen">Bemerkungen:</label>
+		<webobject name = "bemerkungen"></webobject>
 
-		<label for="vorname">Vorname</label><br>
-		<webobject name = "vorname"></webobject><br>
-
-		<label for="strasse">Strasse</label><br>
-		<webobject name = "strasse"></webobject><br>
-
-		<label for="plz">PLZ</label><br>
-		<webobject name = "plz"></webobject><br>
-
-		<label for="ort">Ort</label><br>
-		<webobject name = "ort"></webobject><br>
-
-		<label for="telefon">Telefon</label><br>
-		<webobject name = "telefon"></webobject><br>
-
-		<label for="bermerkungen">Bemerkungen</label><br>
-		<webobject name = "bemerkungen"></webobject><br>
 			<br>
-		<webobject name = "submitbutton">Bestätigen</webobject><br>
-		<webobject name = "backbutton">Abbrechen</webobject><br>
+			<br>
+			
+		<webobject name = "submitbutton">Bestätigen</webobject>
+		<webobject name = "backbutton">Abbrechen</webobject>
 
 	</webobject>
 

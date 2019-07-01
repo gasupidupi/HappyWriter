@@ -66,7 +66,7 @@ public class LoginSeite extends ERXComponent {
     		return nextpage;
     		
     	} else {
-    		this.setErrorText("Falscher Benutzername oder falsches Passwort");
+    		this.setErrorText("Falscher Benutzername oder falsches Passwort!");
     	}
 		return null;
     	
